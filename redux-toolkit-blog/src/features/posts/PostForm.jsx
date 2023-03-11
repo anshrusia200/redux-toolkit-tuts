@@ -35,7 +35,7 @@ export const PostForm = () => {
         placeholder="title"
       />
       <br />
-      <select name="" id="" onChange={(e) => setUserId(e.target.value)}>
+      <select value={userId} id="" onChange={(e) => setUserId(e.target.value)}>
         <option value=""></option>
         {usersOptions}
       </select>
@@ -47,9 +47,10 @@ export const PostForm = () => {
         placeholder="content"
       />
       <br />
-      <button onClick={handleSubmit} disable={!canSave}>
+      <button onClick={handleSubmit} disabled={!canSave}>
         Add Post
       </button>
+      <br />
     </div>
   );
 };
